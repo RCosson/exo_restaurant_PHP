@@ -4,20 +4,38 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Restaurant</title>
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <form method="post" action="confirmation_plat.php">
-    <label>Nom du plat</label>
-    <input type="text" name="nom" />
-    <br />
-    <label>Prix du plat</label>
-    <input type="text" name="prix" />
-    <br />
-    <label>URL de la photo du plat</label>
-    <input type="text" name="photo" />
-    <br />
-    <input type="submit" value="Ajouter plat">
-  </form>
+  <div class="content">
+    <div class="nav-top">
+      <ul>
+        <li><a href="menus.php">menus</a></li>
+        <li><a href="ajout_menu.php">ajout menus</a></li>
+        <li><a href="plats.php">plats</a></li>
+        <li><a href="ajout_plat.html">ajout plat</a></li>
+        <li><a href="index.html">accueil</a></li>
+      </ul>
+    </div>
+    <div class="header"></div>
+    <div class="middle">
+      <form method="post" action="confirmation_plat.php" class="form">
+        <label>Nom du plat</label><br />
+        <input type="text" name="nom" />
+        <br />
+        <label>Prix du plat</label><br />
+        <input type="text" name="prix" />
+        <br />
+        <label>URL de la photo du plat</label><br />
+        <input type="text" name="photo" />
+        <br /><br />
+        <input type="submit" value="Ajouter plat">
+      </form>
+    </div>
+    <div class="bottom">
+      <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
+    </div>
+  </div>
 </body>
 </html>
