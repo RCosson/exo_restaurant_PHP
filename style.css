@@ -16,7 +16,7 @@ body {
   margin: 0;
   background-image: url("bg2.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-color: rgb(136,110,99);
 }
 
 .nav-top {
@@ -53,7 +53,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  margin: 15%;
+  margin: 10% 15% 15% 15%;
   height: auto;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 10px;
@@ -64,15 +64,17 @@ body {
   display: flex;
   flex-flow: column;
   margin: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .plat p {
-  width: 120px;
+  width: 150px;
 }
 
 .middle img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
 }
 
 .form {
@@ -99,8 +101,12 @@ body {
 @media screen and (max-width: 410px) {
   .nav-top li {
     float: none;
+    padding: 5px;
   }
-  .nav-top {
-    
+  .nav-top ul {
+    margin: 0;
+  }
+  .middle {
+    margin-top: 250px;
   }
 }
