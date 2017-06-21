@@ -14,9 +14,10 @@ html {
 
 body {
   margin: 0;
-  background-image: url("bg2.jpg");
+  background-image: url("bg2.png");
   background-size: cover;
   background-color: rgb(136,110,99);
+  background-repeat: no-repeat;
 }
 
 .nav-top {
@@ -96,6 +97,15 @@ body {
 .bottom p {
   color: white;
   line-height: 8px;
+}
+
+.submit {
+  position: fixed;
+  bottom: 10px;
+  left: 10px;
+  color: black;
+  font-weight: 400;
+  font-size: 150%;
 }
 
 @media screen and (max-width: 410px) {
