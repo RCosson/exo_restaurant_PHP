@@ -27,6 +27,10 @@
 
       $reponse = $bdd->query('SELECT * FROM plats');
 
+      SELECT menus.id_plat2 AS id_plat, plats.id AS id2
+      FROM plats, menus
+      WHERE menus.id_plat = plats.ID
+
       while ($donnees = $reponse->fetch()) {
         echo "<div class='plat'>" . '<img src="' . $donnees['image'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . '</p>' . "</div>";
       }

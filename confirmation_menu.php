@@ -25,18 +25,18 @@
 
       <?php
 
-      /*$nom = $_POST['nom'];
-      $prix = $_POST['prix'];
-      $photo = $_POST['photo'];
+      $nom = $_POST['nom-menu'];
+      $prix = $_POST['prix-menu'];
+      $id = $_POST['id-menu'];
 
-      $req = $bdd->prepare("INSERT INTO `plats` ( `nom`, `prix`, `image`) VALUES ('$nom', '$prix','$photo')");
+      $req = $bdd->prepare("INSERT INTO `menus` ( `nom`, `prix`, `id_plat`) VALUES ('$nom', '$prix', '$id')");
       $req->execute(array(
       	'nom' => $nom,
       	'prix' => $prix,
-      	'photo' => $photo,
+        'id' => $id,
       	));
 
-      echo 'Le plat a bien été ajouté !';*/
+      echo 'Le menu a bien été ajouté !';
 
       ?>
     </div>

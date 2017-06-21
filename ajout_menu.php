@@ -18,9 +18,17 @@
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
-    <div class="header"></div>
-    <form action="confirmation_menu.php">
-    <div class="middle">
+    <form method="post" action="confirmation_menu.php">
+    <div class="middle-form">
+      <label>Nom du menu</label><br />
+      <input type="text" name="nom-menu" />
+      <br />
+      <label>Prix du menu</label><br />
+      <input type="text" name="prix-menu" />
+      <br /> <br />
+      <input type="submit" value="Créer menu" class="submit">
+    </div>
+    <div class="middle-menu">
 
       <?php include("./include/connection.php"); ?>
 
@@ -29,12 +37,11 @@
       $reponse = $bdd->query('SELECT * FROM plats');
 
       while ($donnees = $reponse->fetch()) {
-        echo "<div class='plat'>" . '<input type="checkbox" value="' . $donnees['nom'] . '">' . '<img src="' . $donnees['image'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . '</p>' . "</div>";
+        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['ID'] . '">' . '<img src="' . $donnees['image'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . '</p>' . "</div>";
       }
 
       ?>
     </div>
-    <input type="submit" value="Créer menu" class="submit">
     </form>
     <!--<div class="bottom">
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
