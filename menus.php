@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <div class="content">
@@ -21,21 +21,28 @@
     <div class="header"></div>
     <div class="middle">
 
-      <?php include("./include/connection.php"); ?>
+      <?php include("./assets/include/connection.php"); ?>
 
       <?php
+        // On récupère tout le contenu de la table plat
+        $reponse = $bdd->query('SELECT * FROM menus');
+        // On parcourt la table plat de la bdd pour afficher le résultat :
+        while ($donnees = $reponse->fetch())
+        {
 
-      $reponse = $bdd->query('SELECT * FROM plats');
+          echo "<div class='plat'>" . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . '</p>' . "</div>";
 
-      SELECT menus.id_plat2 AS id_plat, plats.id AS id2
-      FROM plats, menus
-      WHERE menus.id_plat = plats.ID
+        }
+        $reponse->closeCursor(); // Termine le traitement de la requête
+        // tables
+        $req_articles = $bdd->query('SELECT menus.prix
 
-      while ($donnees = $reponse->fetch()) {
-        echo "<div class='plat'>" . '<img src="' . $donnees['image'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . '</p>' . "</div>";
-      }
+        FROM `plats`
+        INNER JOIN `menus`
+        ON `plats`.`ID` = `menus`.`id_plat`
+        ');
+        ?>
 
-      ?>
     </div>
     <!--<div class="bottom">
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>

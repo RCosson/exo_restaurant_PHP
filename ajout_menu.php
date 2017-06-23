@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
   <div class="content">
@@ -30,7 +30,7 @@
     </div>
     <div class="middle-menu">
 
-      <?php include("./include/connection.php"); ?>
+      <?php include("./assets/include/connection.php"); ?>
 
       <?php
 
