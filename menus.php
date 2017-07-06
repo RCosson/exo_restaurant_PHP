@@ -30,17 +30,12 @@
         while ($donnees = $reponse->fetch())
         {
 
-          echo "<div class='plat'>" . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . '</p>' . "</div>";
+          echo "<div class='plat'>" . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
 
         }
         $reponse->closeCursor(); // Termine le traitement de la requête
         // tables
-        $req_articles = $bdd->query('SELECT menus.prix
-
-        FROM `plats`
-        INNER JOIN `menus`
-        ON `plats`.`ID` = `menus`.`id_plat`
-        ');
+        
         ?>
 
     </div>

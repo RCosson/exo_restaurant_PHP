@@ -24,7 +24,7 @@
       <input type="text" name="nom-menu" />
       <br />
       <label>Prix du menu</label><br />
-      <input type="text" name="prix-menu" />
+      <input type="text" placeholder="€" name="prix-menu" />
       <br /> <br />
       <input type="submit" value="Créer menu" class="submit">
     </div>
@@ -34,10 +34,15 @@
 
       <?php
 
+      // plat -> utilisateur
+      // menu -> jeu_video
+
+      //$link = $bdd->query('SELECT menus.image, plats.image FROM menus, plats WHERE menus.id_plat = plats.ID');
+
       $reponse = $bdd->query('SELECT * FROM plats');
 
       while ($donnees = $reponse->fetch()) {
-        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['ID'] . '">' . '<img src="' . $donnees['image'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . '</p>' . "</div>";
+        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['ID'] . '">' . '<img src="' . $donnees['image'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
       }
 
       ?>
