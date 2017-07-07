@@ -29,7 +29,7 @@
       $prix = $_POST['prix'];
       $photo = $_POST['photo'];
 
-      $req = $bdd->prepare("INSERT INTO `plats` ( `nom`, `prix`, `image`) VALUES ('$nom', '$prix','$photo')");
+      $req = $bdd->prepare("INSERT INTO `plats` ( `nom`, `prix`, `imageURL`) VALUES ('$nom', '$prix','$photo')");
       $req->execute(array(
       	'nom' => $nom,
       	'prix' => $prix,

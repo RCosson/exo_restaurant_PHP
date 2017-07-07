@@ -28,7 +28,7 @@
       $reponse = $bdd->query('SELECT * FROM plats');
 
       while ($donnees = $reponse->fetch()) {
-        echo "<div class='plat'>" . '<img src="' . $donnees['image'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
+        echo "<div class='plat'>" . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
       }
 
       ?>

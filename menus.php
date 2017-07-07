@@ -25,17 +25,17 @@
 
       <?php
         // On récupère tout le contenu de la table plat
-        $reponse = $bdd->query('SELECT * FROM menus');
+        $reponse = $bdd->query('SELECT * FROM `plats` LEFT JOIN `menus` ON `plats`.`ID` = menus.id_plat WHERE id_plat IS NOT NULL');
         // On parcourt la table plat de la bdd pour afficher le résultat :
         while ($donnees = $reponse->fetch())
         {
 
-          echo "<div class='plat'>" . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
+          echo "<div class='menuImg'>" . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
 
         }
         $reponse->closeCursor(); // Termine le traitement de la requête
         // tables
-        
+
         ?>
 
     </div>
