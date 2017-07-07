@@ -29,14 +29,14 @@
       $prix = $_POST['prix-menu'];
       $id = $_POST['id-menu'];
 
-      $req = $bdd->prepare("INSERT INTO `menus` ( `nom`, `prix`, `id_plat`) VALUES ('$nom', '$prix', '$id')");
+      $req = $bdd->prepare("UPDATE `menus` SET `nom` = `$nom`, `prix` = `$prix`, `id_plat` = `$id` WHERE `ID` = `$id`");
       $req->execute(array(
       	'nom' => $nom,
       	'prix' => $prix,
         'id' => $id,
       	));
 
-      echo 'Le menu a bien été ajouté ! <form action="ajout_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>';
+      echo 'Le menu a bien été modifié ! <form action="modif_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>';
 
       ?>
     </div>

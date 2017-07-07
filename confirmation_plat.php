@@ -36,7 +36,7 @@
       	'photo' => $photo,
       	));
 
-      echo 'Le plat a bien été ajouté !';
+      echo 'Le plat a bien été ajouté ! <form action="ajout_plat.php"><input type="submit" value="Retour" /></form><form action="plats.php"><input type="submit" value="Voir" /></form>';
 
       ?>
     </div>

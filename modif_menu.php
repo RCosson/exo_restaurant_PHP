@@ -18,7 +18,7 @@
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
-    <form method="post" action="confirmation_menu.php">
+    <form method="post" action="confirmation_modif_menu.php">
     <div class="middle-form">
       <label>Nom du menu</label><br />
       <input type="text" name="nom-menu" />
