@@ -12,9 +12,9 @@
     <div class="nav-top">
       <ul>
         <li><a href="menus.php">menus</a></li>
-        <li><a href="ajout_menu.php">ajout menus</a></li>
+        <li><a href="ajout_menu.php">modifier menus</a></li>
         <li><a href="plats.php">plats</a></li>
-        <li><a href="ajout_plat.html">ajout plat</a></li>
+        <li><a href="ajout_plat.html">modifier plats</a></li>
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
@@ -29,14 +29,22 @@
       $prix = $_POST['prix-menu'];
       $id = $_POST['id-menu'];
 
-      $req = $bdd->prepare('UPDATE `menus` SET `nom` = :nom, `prix` = :prix WHERE `id_plat` = :id_plat');
-      $req->execute(array(
-      	'nom' => $nom,
-      	'prix' => $prix,
-        'id_plat' => $id,
-      	));
-        echo $nom . " " . $prix . " " . $id . " ";
-      echo 'Le menu a bien été modifié ! <form action="modif_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>';
+      if ($req = false) {
+        echo 'Ce plat ne correspond à aucun menu ! <form action="modif_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>';
+      } else {
+        $req = $bdd->prepare('UPDATE `menus` SET `nom_menu` = :nom_menu, `prix_menu` = :prix_menu WHERE `id_plat` = :id_plat');
+          $req->execute(array(
+          	'nom_menu' => $nom,
+          	'prix_menu' => $prix,
+            'id_plat' => $id,
+          	));
+            echo $nom . " " . $prix . " " . $id . " ";
+          echo 'Le menu a bien été modifié ! <form action="modif_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>';
+      }
+
+
+
+      //'Ce plat ne correspond à aucun menu ! <form action="modif_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>'
 
       ?>
     </div>

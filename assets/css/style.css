@@ -28,7 +28,7 @@ body {
   left: 0;
   right: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .nav-top ul {
@@ -42,13 +42,13 @@ body {
 }
 
 .nav-top a {
-  color: black;
+  color: white;
   text-decoration: none;
   transition: 0.4s;
 }
 
 .nav-top a:hover {
-  color: dimgrey;
+  text-shadow: 1px 1px 1px white;
   transition: 0.4s;
 }
 
@@ -142,6 +142,24 @@ body {
   width: 142px;
 }
 
+.button1 {
+  position: fixed;
+  bottom: 5px;
+  left: 5px;
+}
+
+.button2 {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+}
+
+.button1, .button2 {
+  color: black;
+  text-decoration: none;
+  font-size: 120%;
+}
+
 .submit {
   color: black;
 }
@@ -150,12 +168,17 @@ body {
   .nav-top li {
     float: none;
     padding: 5px;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     list-style: square;
+  }
+  .nav-top li:nth-child(1) {
+    padding-top: 0;
+  }
+  .nav-top li:nth-child(5) {
+    border-bottom: none;
   }
   .nav-top ul {
     margin: 0;
-    padding-bottom: 5px;
   }
   .middle, .middle-form {
     margin-top: 250px;

@@ -12,9 +12,9 @@
     <div class="nav-top">
       <ul>
         <li><a href="menus.php">menus</a></li>
-        <li><a href="ajout_menu.php">ajout menus</a></li>
+        <li><a href="ajout_menu.php">modifier menus</a></li>
         <li><a href="plats.php">plats</a></li>
-        <li><a href="ajout_plat.html">ajout plat</a></li>
+        <li><a href="ajout_plat.html">modifier plats</a></li>
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
@@ -24,7 +24,7 @@
       <input type="text" name="nom-menu" required/>
       <br />
       <label>Prix du menu</label><br />
-      <input type="text" placeholder="en €" name="prix-menu" required/>
+      <input type="text" placeholder="€" name="prix-menu" required/>
       <br /> <br />
       <input type="submit" value="Modifier menu" class="submit">
     </div>
@@ -34,10 +34,10 @@
 
       <?php
 
-      $reponse = $bdd->query('SELECT * FROM plats');
+      $reponse = $bdd->query('SELECT * FROM `plats` LEFT JOIN `menus` ON `plats`.`ID` = menus.id_plat WHERE id_plat IS NOT NULL');
 
       while ($donnees = $reponse->fetch()) {
-        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['ID'] . '" required>' . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
+        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['id_plat'] . '" required>' . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom_menu'] . ", " . $donnees['prix_menu'] . "€" . '</p>' . "</div>";
       }
 
       ?>
@@ -46,6 +46,8 @@
     <!--<div class="bottom">
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
     </div>-->
+    <button onclick="window.location.href='ajout_menu.php'" type="button" class="button1">Ajouter menu</button>
+    <button onclick="window.location.href='supp_menu.php'" type="button" class="button2">Supprimer menu</button>
   </div>
 </body>
 </html>

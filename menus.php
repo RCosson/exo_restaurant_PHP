@@ -12,9 +12,9 @@
     <div class="nav-top">
       <ul>
         <li><a href="menus.php">menus</a></li>
-        <li><a href="ajout_menu.php">ajout menus</a></li>
+        <li><a href="ajout_menu.php">modifier menus</a></li>
         <li><a href="plats.php">plats</a></li>
-        <li><a href="ajout_plat.html">ajout plat</a></li>
+        <li><a href="ajout_plat.html">modifier plats</a></li>
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
@@ -30,7 +30,7 @@
         while ($donnees = $reponse->fetch())
         {
 
-          echo "<div class='menuImg'>" . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
+          echo "<div class='menuImg'>" . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom_menu'] . ", " . $donnees['prix_menu'] . "€" . '</p>' . "</div>";
 
         }
         $reponse->closeCursor(); // Termine le traitement de la requête
