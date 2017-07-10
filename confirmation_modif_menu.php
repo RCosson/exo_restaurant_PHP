@@ -11,10 +11,10 @@
   <div class="content">
     <div class="nav-top">
       <ul>
-        <li><a href="menus.php">menus</a></li>
         <li><a href="modif_menu.php">modifier menus</a></li>
+        <li><a href="menus.php">menus</a></li>
+        <li><a href="modif_plat.php">modifier plats</a></li>
         <li><a href="plats.php">plats</a></li>
-        <li><a href="modif_plat.html">modifier plats</a></li>
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
