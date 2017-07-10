@@ -12,9 +12,9 @@
     <div class="nav-top">
       <ul>
         <li><a href="menus.php">menus</a></li>
-        <li><a href="ajout_menu.php">ajout menus</a></li>
+        <li><a href="modif_menu.php">modifier menus</a></li>
         <li><a href="plats.php">plats</a></li>
-        <li><a href="ajout_plat.html">ajout plat</a></li>
+        <li><a href="modif_plat.html">modifier plats</a></li>
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
@@ -36,6 +36,8 @@
     <!--<div class="bottom">
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
     </div>-->
+    <button onclick="window.location.href='ajout_plat.php'" type="button" class="button1">Ajouter plat</button>
+    <button onclick="window.location.href='supp_plat.php'" type="button" class="button2">Supprimer plat</button>
   </div>
 </body>
 </html>
