@@ -29,7 +29,7 @@
       $prix = $_POST['prix-menu'];
       $id = $_POST['id-menu'];
 
-      $req = $bdd->prepare("INSERT INTO `menus` ( `nom`, `prix`, `id_plat`) VALUES ('$nom', '$prix', '$id')");
+      $req = $bdd->prepare("INSERT INTO `menus` ( `nom_menu`, `prix_menu`, `id_plat`) VALUES ('$nom', '$prix', '$id')");
       $req->execute(array(
       	'nom' => $nom,
       	'prix' => $prix,
