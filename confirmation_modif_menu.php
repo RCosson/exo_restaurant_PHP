@@ -29,13 +29,13 @@
       $prix = $_POST['prix-menu'];
       $id = $_POST['id-menu'];
 
-      $req = $bdd->prepare("UPDATE `menus` SET `nom` = `$nom`, `prix` = `$prix`, `id_plat` = `$id` WHERE `ID` = `$id`");
+      $req = $bdd->prepare('UPDATE `menus` SET `nom` = :nom, `prix` = :prix WHERE `id_plat` = :id_plat');
       $req->execute(array(
       	'nom' => $nom,
       	'prix' => $prix,
-        'id' => $id,
+        'id_plat' => $id,
       	));
-
+        echo $nom . " " . $prix . " " . $id . " ";
       echo 'Le menu a bien été modifié ! <form action="modif_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>';
 
       ?>

@@ -21,12 +21,12 @@
     <form method="post" action="confirmation_modif_menu.php">
     <div class="middle-form">
       <label>Nom du menu</label><br />
-      <input type="text" name="nom-menu" />
+      <input class="field" type="text" name="nom-menu" required/>
       <br />
       <label>Prix du menu</label><br />
-      <input type="text" placeholder="€" name="prix-menu" />
+      <input class="field" type="text" placeholder="en €" name="prix-menu" required/>
       <br /> <br />
-      <input type="submit" value="Créer menu" class="submit">
+      <input type="submit" value="Modifier menu" class="submit">
     </div>
     <div class="middle-menu">
 
@@ -34,15 +34,10 @@
 
       <?php
 
-      // plat -> utilisateur
-      // menu -> jeu_video
-
-      //$link = $bdd->query('SELECT menus.id_plat, plats.ID FROM menus, plats WHERE menus.id_plat = plats.ID');
-
       $reponse = $bdd->query('SELECT * FROM plats');
 
       while ($donnees = $reponse->fetch()) {
-        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['ID'] . '">' . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
+        echo "<div class='plat'>" . '<input class="radio field" name="id-menu" type="radio" value="' . $donnees['ID'] . '" required>' . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
       }
 
       ?>
