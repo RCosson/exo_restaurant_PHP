@@ -21,10 +21,10 @@
     <form method="post" action="confirmation_menu.php">
     <div class="middle-form">
       <label>Nom du menu</label><br />
-      <input type="text" name="nom-menu" />
+      <input type="text" name="nom-menu" required/>
       <br />
       <label>Prix du menu</label><br />
-      <input type="text" placeholder="€" name="prix-menu" />
+      <input type="text" placeholder="€" name="prix-menu" required/>
       <br /> <br />
       <input type="submit" value="Créer menu" class="submit">
     </div>
@@ -42,7 +42,7 @@
       $reponse = $bdd->query('SELECT * FROM plats');
 
       while ($donnees = $reponse->fetch()) {
-        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['ID'] . '">' . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
+        echo "<div class='plat'>" . '<input class="radio" name="id-menu" type="radio" value="' . $donnees['ID'] . '" required>' . '<img src="' . $donnees['imageURL'] . '" alt="plat">' . '<p>' . $donnees['nom'] . ", " . $donnees['prix'] . "€" . '</p>' . "</div>";
       }
 
       ?>
