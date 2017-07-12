@@ -18,15 +18,9 @@
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
-    <form method="post" action="confirmation_modif_plat.php">
+    <form method="post" action="confirmation_supp_plat.php">
     <div class="middle-form">
-      <label>Nom du plat</label><br />
-      <input type="text" name="nom-plat" required/>
-      <br />
-      <label>Prix du plat</label><br />
-      <input type="text" placeholder="€" name="prix-plat" required/>
-      <br /> <br />
-      <input type="submit" value="Modifier plat" class="submit">
+      <input type="submit" value="Supprimer plat" class="submit">
     </div>
     <div class="middle-menu">
 
@@ -46,7 +40,7 @@
     <!--<div class="bottom">
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
     </div>-->
-    <button onclick="window.location.href='ajout_plat.php'" type="button" class="button1">Ajouter plat</button>
+    <button onclick="window.location.href='modif_plat.php'" type="button" class="button1">Modifier plat</button>
     <button onclick="window.location.href='supp_plat.php'" type="button" class="button2">Supprimer plat</button>
   </div>
 </body>

@@ -18,15 +18,9 @@
         <li><a href="index.html">accueil</a></li>
       </ul>
     </div>
-    <form method="post" action="confirmation_modif_menu.php">
+    <form method="post" action="confirmation_supp_menu.php">
     <div class="middle-form">
-      <label>Nom du menu</label><br />
-      <input type="text" name="nom-menu" required/>
-      <br />
-      <label>Prix du menu</label><br />
-      <input type="text" placeholder="€" name="prix-menu" required/>
-      <br /> <br />
-      <input type="submit" value="Modifier menu" class="submit">
+      <input type="submit" value="Supprimer menu" class="submit">
     </div>
     <div class="middle-menu">
 
@@ -46,7 +40,7 @@
     <!--<div class="bottom">
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
     </div>-->
-    <button onclick="window.location.href='ajout_menu.php'" type="button" class="button1">Ajouter menu</button>
+    <button onclick="window.location.href='modif_menu.php'" type="button" class="button1">Modifier menu</button>
     <button onclick="window.location.href='supp_menu.php'" type="button" class="button2">Supprimer menu</button>
   </div>
 </body>
