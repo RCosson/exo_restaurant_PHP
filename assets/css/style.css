@@ -31,6 +31,20 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.nav-top .left {
+  float: left;
+  color: white;
+}
+
+.left a {
+  font-weight: bold;
+}
+
+.nav-top p {
+  margin: 0;
+  color: white;
+}
+
 .nav-top ul {
   list-style: none;
   margin-top: 0;
@@ -164,6 +178,10 @@ body {
   color: black;
 }
 
+.inline {
+  display: inline-block;
+}
+
 @media screen and (max-width: 410px) {
   .nav-top li {
     float: none;
@@ -187,5 +205,8 @@ body {
   }
   .submit {
     margin-top: 10px;
+  }
+  .nav-top .left {
+    display: none;
   }
 }

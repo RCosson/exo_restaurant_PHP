@@ -1,3 +1,8 @@
+<?php
+session_start();
+$pseudo = $_SESSION['pseudo'];
+$mdp = $_SESSION['mdp'];
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,11 +16,29 @@
   <div class="content">
     <div class="nav-top">
       <ul>
-        <li><a href="modif_menu.php">modifier menus</a></li>
+        <?php
+          if ($_SESSION['pseudo'] === "admin" && $_SESSION['mdp'] === "admin") {
+            echo "<li><a href='modif_menu.php'>modifier menus</a></li>";
+          }
+          else {
+            echo "lol";
+          }
+
+         ?>
         <li><a href="menus.php">menus</a></li>
-        <li><a href="modif_plat.php">modifier plats</a></li>
+        <?php
+
+          if ($_SESSION['pseudo'] === "admin" && $_SESSION['mdp'] === "admin") {
+            echo "<li><a href='modif_plat.php'>modifier plats</a></li>";
+          }
+          else {
+            echo "lol";
+          }
+
+         ?>
         <li><a href="plats.php">plats</a></li>
-        <li><a href="index.html">accueil</a></li>
+        <li><a href="accueil.php">accueil</a></li>
+        <li class="left"><?php echo "Connecté(e) en tant que " . $_SESSION['pseudo'] . ". <a href='index.php'>[Se déconnecter]</a>"; ?></li>
       </ul>
     </div>
     <div class="header"></div>
@@ -38,7 +61,6 @@
           	'prix_menu' => $prix,
             'id_plat' => $id,
           	));
-            echo $nom . " " . $prix . " " . $id . " ";
           echo 'Le menu a bien été modifié ! <form action="modif_menu.php"><input type="submit" value="Retour" /></form><form action="menus.php"><input type="submit" value="Voir" /></form>';
       }
 
