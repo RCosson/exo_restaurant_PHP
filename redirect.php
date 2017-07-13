@@ -18,7 +18,7 @@ header("Location: accueil.php");
 <body>
   <div class="content">
     <div class="middle inline">
-      <?php sleep(3); echo "Bienvenue " . isset($pseudo) . " !"; ?>
+      <?php sleep(2); echo "Bienvenue " . isset($pseudo) . " !"; ?>
     </div>
   </div>
 </body>

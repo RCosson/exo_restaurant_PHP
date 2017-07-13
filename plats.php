@@ -9,7 +9,7 @@ $mdp = $_SESSION['mdp'];
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Chez Romain - plats</title>
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -38,7 +38,7 @@ $mdp = $_SESSION['mdp'];
          ?>
         <li><a href="plats.php">plats</a></li>
         <li><a href="accueil.php">accueil</a></li>
-        <li class="left"><?php echo "Connecté(e) en tant que " . $_SESSION['pseudo'] . ". <a href='index.php'>[Se déconnecter]</a>"; ?></li>
+        <li class="left"><?php echo "Connecté(e) en tant que: " . $_SESSION['pseudo'] . " <a href='index.php'>[Se déconnecter]</a>"; ?></li>
       </ul>
     </div>
     <div class="header"></div>

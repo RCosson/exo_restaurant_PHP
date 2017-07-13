@@ -38,7 +38,7 @@ $mdp = $_SESSION['mdp'];
          ?>
         <li><a href="plats.php">plats</a></li>
         <li><a href="accueil.php">accueil</a></li>
-        <li class="left"><?php echo "Connecté(e) en tant que " . $_SESSION['pseudo'] . ". <a href='index.php'>[Se déconnecter]</a>"; ?></li>
+        <li class="left"><?php echo "Connecté(e) en tant que: " . $_SESSION['pseudo'] . " <a href='index.php'>[Se déconnecter]</a>"; ?></li>
       </ul>
     </div>
     <form method="post" action="confirmation_supp_menu.php">
