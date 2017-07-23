@@ -10,6 +10,7 @@ $mdp = $_SESSION['mdp'];
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link rel="icon" href="./assets/img/icone.ico">
   <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
@@ -64,6 +65,7 @@ $mdp = $_SESSION['mdp'];
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
     </div>-->
     <button onclick="window.location.href='modif_plat.php'" type="button" class="button1">Modifier plat</button>
+    <button onclick="window.location.href='index.php'" type="button" class="deco">Se déconnecter</button>
     <button onclick="window.location.href='supp_plat.php'" type="button" class="button2">Supprimer plat</button>
   </div>
 </body>
