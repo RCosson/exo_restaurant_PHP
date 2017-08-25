@@ -188,6 +188,8 @@ body {
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
+  color: black;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 410px) {

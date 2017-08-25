@@ -66,7 +66,7 @@ $mdp = $_SESSION['mdp'];
     <!--<div class="bottom">
       <p>Copyright (c) 2017 Copyright Holder All Rights Reserved.</p>
     </div>-->
-    <button onclick="window.location.href='index.php'" type="button" class="deco">Se déconnecter</button>
+    <button onclick="window.location.href='index.php'" type="button" class="deco">[→</button>
   </div>
 </body>
 </html>
