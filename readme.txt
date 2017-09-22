@@ -1,1 +1,1 @@
-mettre admin admin pour se connecter en admin
+simple crud en php + sql
